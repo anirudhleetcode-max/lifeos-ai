@@ -18,7 +18,8 @@ services:
       context: .
       dockerfile: Dockerfile.backend
     environment:
-      - OPENAI_API_KEY=sk-proj-1234567890abcdefghijklmnopqrstuvwxyz
+      # We changed this line to use Groq!
+      - GROQ_API_KEY=gsk_YOUR_ACTUAL_KEY_HERE
     ports:
       - "8000:8000"
     depends_on:
