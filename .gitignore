@@ -1,0 +1,17 @@
+# React / Next.js
+node_modules/
+frontend/node_modules/
+.next/
+frontend/.next/
+
+# Python / Backend
+__pycache__/
+*.pyc
+
+# Database & Secrets
+.env
+docker-compose.override.yml
+
+# Operating System Files
+.DS_Store
+Thumbs.db
