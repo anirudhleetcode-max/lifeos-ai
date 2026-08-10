@@ -1,53 +1,30 @@
-# 🧠 LifeOS - Agentic AI Task Manager
+# ✨ LifeOS - Multi-Modal Agentic Task Orchestrator
 
-LifeOS is a full-stack, AI-powered task management platform. Unlike standard chatbots, LifeOS features an **Agentic AI** capable of reasoning through user prompts and autonomously executing CRUD operations on a PostgreSQL database using function calling.
+LifeOS is an advanced, autonomous AI Co-Pilot designed to reduce cognitive load. Moving beyond simple LLM API wrappers, this project implements a Multi-Agent architecture with real-time NLP, Audio processing, and Vector-based semantic memory.
 
-## 🚀 Key Features
+## 🧠 Advanced ML Architecture (IIT Internship Focus)
 
-* **Agentic Function Calling:** Powered by Groq and Llama 3.1, the AI parses natural language to automatically add, read, and delete tasks from the database.
-* **Semantic Memory Ready:** Integrated with Qdrant Vector Database for long-term AI memory and Retrieval-Augmented Generation (RAG).
-* **Modern Frontend UI:** A responsive, real-time React/Next.js interface with dedicated tabs for chat and manual task management.
-* **Fully Containerized:** The entire backend ecosystem (API, Relational DB, Vector DB) is orchestrated using Docker Compose.
+1. **Multi-Agent Task Decomposition:** Massive user goals are autonomously intercepted, decomposed into micro-tasks, and pushed to PostgreSQL using structured Function Calling.
+2. **Zero-Shot NLP Categorization:** The AI dynamically infers the domain (Health, Coding, Admin) and assigns a priority score (1-5) without explicit user tagging.
+3. **Sentiment-Aware Prompting:** The system uses `TextBlob` to run real-time sentiment analysis on user input. If high stress is detected, the AI's internal system prompt dynamically shifts to reduce cognitive load and prioritize high-urgency items.
+4. **Multi-Modal Audio (Whisper):** Integrates OpenAI's Whisper model (via Groq) to allow seamless voice-to-text task generation.
+5. **RAG Semantic Memory:** Pre-configured with Qdrant Vector DB and `fastembed` for localized vector embeddings, allowing the AI to recall past contexts using Cosine Similarity.
 
 ## 💻 Tech Stack
-
-* **Frontend:** Next.js, React, Tailwind CSS
-* **Backend:** Python, FastAPI, SQLAlchemy, LiteLLM
+* **Frontend:** Next.js, React, Tailwind CSS, Framer Motion (Physics-based UI)
+* **Backend:** Python, FastAPI, SQLAlchemy, TextBlob, LiteLLM
 * **Databases:** PostgreSQL (Relational), Qdrant (Vector)
-* **AI Provider:** Groq (Llama 3.1 8B Instant)
-* **DevOps:** Docker, Docker Compose
+* **AI Provider:** Groq (Llama 3.1 8B & Whisper Large v3)
+* **DevOps:** Docker Compose
 
-## 🛠️ Local Setup Instructions
-
-**1. Clone the repository**
+## 🚀 Quick Start
 \`\`\`bash
-git clone https://github.com/your-username/lifeos-ai.git
-cd lifeos-ai
-\`\`\`
-
-**2. Configure Environment Variables**
-Create a \`.env\` file in the root directory and add your Groq API key:
-\`\`\`text
-GROQ_API_KEY=your_api_key_here
-\`\`\`
-
-**3. Launch the Backend Ecosystem**
-Start the FastAPI server, PostgreSQL database, and Qdrant vector database:
-\`\`\`bash
+# 1. Add your GROQ_API_KEY to the .env file
+# 2. Start the backend ecosystem (Postgres, Qdrant, FastAPI)
 docker-compose up -d --build
-\`\`\`
-*The backend API will be available at \`http://localhost:8000/docs\`*
 
-**4. Start the Frontend**
-Open a new terminal, navigate to the frontend folder, and start the Next.js server:
-\`\`\`bash
+# 3. Start the frontend
 cd frontend
 npm install
 npm run dev
 \`\`\`
-*The UI will be available at \`http://localhost:3000\`*
-
-## 🤖 Example AI Prompts to Try
-* *"I have a massive project submission tonight. Can you suggest two things I should do to prepare and add them to my tasks?"*
-* *"What do I currently have on my plate?"*
-* *"I finished my project! Can you delete that task for me?"*

@@ -5,3 +5,6 @@ psycopg2-binary
 pydantic
 litellm
 qdrant-client
+fastembed
+textblob
+python-multipart
