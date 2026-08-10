@@ -45,9 +45,9 @@ async def chat_endpoint(request: ChatRequest, db: Session = Depends(get_db)):
             }
         ]
 
-        # 3. Ask the AI how it wants to respond
+        # 3. Ask the AI how it wants to respond (NOW USING GROQ!)
         response = litellm.completion(
-            model="groq/llama3-8b-8192", # CHANGED THIS LINE
+            model="groq/llama3-8b-8192",
             messages=[
                 {"role": "system", "content": "You are LifeOS, a helpful AI assistant. You can read and manage tasks for the user. Be friendly and concise."},
                 {"role": "user", "content": request.message}
