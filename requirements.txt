@@ -1,10 +1,10 @@
 fastapi
 uvicorn
+pydantic
+groq
+passlib[bcrypt]
+python-jose[cryptography]
 sqlalchemy
 psycopg2-binary
-pydantic
-litellm
 qdrant-client
-fastembed
-textblob
-python-multipart
+sentence-transformers

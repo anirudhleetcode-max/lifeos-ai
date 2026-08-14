@@ -1,9 +1,10 @@
-﻿fastapi
+fastapi
 uvicorn
+pydantic
+groq
+passlib[bcrypt]
+python-jose[cryptography]
 sqlalchemy
 psycopg2-binary
-groq
-pydantic
-torch
-scikit-learn
-numpy
+qdrant-client
+sentence-transformers
