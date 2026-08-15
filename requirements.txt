@@ -8,3 +8,4 @@ sqlalchemy
 psycopg2-binary
 qdrant-client
 sentence-transformers
+email-validator
